@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="MetroEditorAdvisorApplication">
+      <!-- @generated metro -->
+      <application>
+         <run class="de.dc.emf.metro.presentation.MetroEditorAdvisor$Application"/>
+      </application>
+   </extension>
+
+   <extension point="org.eclipse.ui.perspectives">
+      <!-- @generated metro -->
+      <perspective
+            name="%_UI_Perspective_label"
+            class="de.dc.emf.metro.presentation.MetroEditorAdvisor$Perspective"
+            id="de.dc.emf.metro.presentation.MetroEditorAdvisorPerspective">
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <!-- @generated metro -->
+      <command
+            name="%_UI_Menu_OpenURI_label"
+            description="%_UI_Menu_OpenURI_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="de.dc.emf.metro.presentation.MetroEditorAdvisorOpenURICommand"/>
+      <command
+            name="%_UI_Menu_Open_label"
+            description="%_UI_Menu_Open_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="de.dc.emf.metro.presentation.MetroEditorAdvisorOpenCommand"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.bindings">
+      <!-- @generated metro -->
+      <key
+            commandId="de.dc.emf.metro.presentation.MetroEditorAdvisorOpenURICommand"
+            sequence="M1+U"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            commandId="de.dc.emf.metro.presentation.MetroEditorAdvisorOpenCommand"
+            sequence="M1+O"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated metro -->
+      <actionSet
+            label="%_UI_MetroEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="MetroEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="de.dc.emf.metro.presentation.MetroEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="de.dc.emf.metro.presentation.MetroEditorAdvisorAboutAction"/>
+         <action
+               label="%_UI_Menu_OpenURI_label"
+               definitionId="de.dc.emf.metro.presentation.MetroEditorAdvisorOpenURICommand"
+               class="de.dc.emf.metro.presentation.MetroEditorAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="de.dc.emf.metro.presentation.MetroEditorAdvisorOpenURIAction"/>
+         <action
+               label="%_UI_Menu_Open_label"
+               definitionId="de.dc.emf.metro.presentation.MetroEditorAdvisorOpenCommand"
+               class="de.dc.emf.metro.presentation.MetroEditorAdvisor$OpenAction"
+               menubarPath="file/additions"
+               id="de.dc.emf.metro.presentation.MetroEditorAdvisorOpenAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated metro -->
+      <actionSet
+            label="%_UI_MetroModelWizard_ActionSet_label"
+            visible="true"
+            id="de.dc.emf.metro.presentation.MetroActionBarContributorActionSet">
+         <action
+               label="%_UI_MetroModelWizard_label"
+               class="de.dc.emf.metro.presentation.MetroActionBarContributor$NewAction"
+               menubarPath="file/new/additions"
+               id="de.dc.emf.metro.presentation.MetroActionBarContributorNewAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated metro -->
+      <editor
+            id="de.dc.emf.metro.presentation.MetroEditorID"
+            name="%_UI_MetroEditor_label"
+            icon="icons/full/obj16/MetroModelFile.gif"
+            extensions="metro"
+            class="de.dc.emf.metro.presentation.MetroEditor"
+            contributorClass="de.dc.emf.metro.presentation.MetroActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

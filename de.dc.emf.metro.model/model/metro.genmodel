@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/de.dc.emf.metro.model/src" modelPluginID="de.dc.emf.metro.model"
+    modelName="Metro" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" runtimePlatform="RCP" importOrganizing="true">
+  <foreignModel>metro.ecore</foreignModel>
+  <genPackages prefix="Metro" basePackage="de.dc.emf" disposableProviderFactory="true"
+      ecorePackage="metro.ecore#/">
+    <genClasses ecoreClass="metro.ecore#//MetroRoot">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metro.ecore#//MetroRoot/applicationName"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference metro.ecore#//MetroRoot/metroPages"/>
+    </genClasses>
+    <genClasses ecoreClass="metro.ecore#//MetroPanel">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference metro.ecore#//MetroPanel/metroPages"/>
+    </genClasses>
+    <genClasses ecoreClass="metro.ecore#//CustomizableElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metro.ecore#//CustomizableElement/name"/>
+    </genClasses>
+    <genClasses ecoreClass="metro.ecore#//MetroPage">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metro.ecore#//MetroPage/showButton"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference metro.ecore#//MetroPage/metroControls"/>
+    </genClasses>
+    <genClasses ecoreClass="metro.ecore#//MetroControl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metro.ecore#//MetroControl/isRequiredField"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metro.ecore#//MetroControl/description"/>
+    </genClasses>
+    <genClasses ecoreClass="metro.ecore#//MetroLabelText"/>
+    <genClasses ecoreClass="metro.ecore#//MetroLabelCombo">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference metro.ecore#//MetroLabelCombo/metroLabelComboItem"/>
+    </genClasses>
+    <genClasses ecoreClass="metro.ecore#//MetroLabelTextArea"/>
+    <genClasses ecoreClass="metro.ecore#//MetroLabelCheckBox">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference metro.ecore#//MetroLabelCheckBox/metroLabelCheckBoxItem"/>
+    </genClasses>
+    <genClasses ecoreClass="metro.ecore#//BaseItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metro.ecore#//BaseItem/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metro.ecore#//BaseItem/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metro.ecore#//BaseItem/isSelected"/>
+    </genClasses>
+    <genClasses ecoreClass="metro.ecore#//MetroTable">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference metro.ecore#//MetroTable/metroTableColumns"/>
+    </genClasses>
+    <genClasses ecoreClass="metro.ecore#//MetroTableColumn">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute metro.ecore#//MetroTableColumn/name"/>
+    </genClasses>
+    <genClasses ecoreClass="metro.ecore#//MetroTree"/>
+  </genPackages>
+</genmodel:GenModel>

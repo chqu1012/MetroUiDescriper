@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metro:MetroRoot xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:metro="http://www.dc-soft.org/metro" applicationName="DC Application">
+  <metroPages name="Home">
+    <metroPages name="New Data">
+      <metroControls xsi:type="metro:MetroLabelText" name="Name" description="Default Name"/>
+      <metroControls xsi:type="metro:MetroLabelText" name="Givenname" description="Default Givenname"/>
+    </metroPages>
+    <metroPages name="Load Data"/>
+  </metroPages>
+</metro:MetroRoot>

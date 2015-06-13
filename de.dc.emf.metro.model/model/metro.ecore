@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="metro" nsURI="http://www.dc-soft.org/metro" nsPrefix="metro">
+  <eClassifiers xsi:type="ecore:EClass" name="MetroRoot">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="applicationName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metroPages" upperBound="-1"
+        eType="#//MetroPanel" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetroPanel" eSuperTypes="#//CustomizableElement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metroPages" upperBound="-1"
+        eType="#//MetroPage" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomizableElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetroPage" eSuperTypes="#//CustomizableElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="showButton" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metroControls" upperBound="-1"
+        eType="#//MetroControl" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetroControl" abstract="true" interface="true"
+      eSuperTypes="#//CustomizableElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isRequiredField" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetroLabelText" eSuperTypes="#//MetroControl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MetroLabelCombo" eSuperTypes="#//MetroControl">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metroLabelComboItem" upperBound="-1"
+        eType="#//BaseItem" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetroLabelTextArea" eSuperTypes="#//MetroControl"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MetroLabelCheckBox" eSuperTypes="#//MetroControl">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metroLabelCheckBoxItem"
+        upperBound="-1" eType="#//BaseItem" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BaseItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isSelected" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetroTable" eSuperTypes="#//MetroControl">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metroTableColumns" upperBound="-1"
+        eType="#//MetroTableColumn" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetroTableColumn">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MetroTree" eSuperTypes="#//MetroControl"/>
+</ecore:EPackage>
