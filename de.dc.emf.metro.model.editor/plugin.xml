@@ -101,5 +101,29 @@
             contributorClass="de.dc.emf.metro.presentation.MetroActionBarContributor">
       </editor>
    </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="de.dc.emf.metro.model.editor.MetroEditorAdvisorApplication"
+            name="MetroUI">
+         <property
+               name="appName"
+               value="MetroUI">
+         </property>
+      </product>
+   </extension>
+   <extension
+         id="product1"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="de.dc.emf.metro.model.editor.MetroEditorAdvisorApplication"
+            name="MetroEditor">
+         <property
+               name="appName"
+               value="MetroEditor">
+         </property>
+      </product>
+   </extension>
 
 </plugin>
