@@ -1,0 +1,34 @@
+<Composite xmlns="http://www.eclipse.org/xwt/presentation" xmlns:x="http://www.eclipse.org/xwt" x:Class="de.dc.emf.metro.model.ui.xwt.MetroSourceViewer">
+	<Composite.layout>
+		<GridLayout/>
+	</Composite.layout>
+	<CoolBar x:Style="FLAT">
+		<CoolBar.layoutData>
+			<GridData horizontalAlignment="FILL" grabExcessHorizontalSpace="true"/>
+		</CoolBar.layoutData>
+		<CoolItem/>
+	</CoolBar>
+	<TabFolder>
+		<TabFolder.layoutData>
+			<GridData horizontalAlignment="FILL" verticalAlignment="FILL" grabExcessHorizontalSpace="true" grabExcessVerticalSpace="true"/>
+		</TabFolder.layoutData>
+		<TabItem text="FXML">
+			<TabItem.control>
+				<Composite x:Name="editorComposite">
+		<Composite.layout>
+			<FillLayout/>
+		</Composite.layout>
+	</Composite>
+			</TabItem.control>
+		</TabItem>
+		<TabItem text="Controller">
+			<TabItem.control>
+				<Composite x:Name="controllerComposite">
+					<Composite.layout>
+						<FillLayout/>
+					</Composite.layout>
+				</Composite>
+			</TabItem.control>
+		</TabItem>
+	</TabFolder>
+</Composite>

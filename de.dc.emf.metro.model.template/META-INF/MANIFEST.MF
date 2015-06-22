@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Template
+Bundle-SymbolicName: de.dc.emf.metro.model.template
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: com.google.guava,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.xtend.lib,
+ org.eclipse.xtend.lib.macro,
+ org.eclipse.emf.ecore;bundle-version="2.11.0",
+ de.dc.emf.metro.model;bundle-version="0.1.0"
+Export-Package: de.dc.emf.metro.model.mapper,
+ de.dc.emf.metro.model.template
+
